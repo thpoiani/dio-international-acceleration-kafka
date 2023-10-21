@@ -17,6 +17,9 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.apache.kafka:kafka-clients'
+	implementation 'org.springframework.kafka:spring-kafka'
+	implementation 'net.datafaker:datafaker:2.0.2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
