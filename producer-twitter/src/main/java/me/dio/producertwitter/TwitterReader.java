@@ -19,14 +19,14 @@ public class TwitterReader {
     @Value("classpath:test_62k.txt")
     private Resource resource;
 
-    public List<String> loadTweets(int amount) throws IOException {
+    public List<String> loadTweets() throws IOException {
         var content = new String(FileCopyUtils.copyToByteArray(resource.getInputStream()), StandardCharsets.UTF_8);
 
         return Arrays.stream(content.split("\n"))
                      .map(line -> line.split("\t")[1].trim())
                      .collect(Collectors.collectingAndThen(Collectors.toList(), list -> {
                          Collections.shuffle(list);
-                         return list.stream().limit(amount).toList();
+                         return list;
                      }));
     }
 }

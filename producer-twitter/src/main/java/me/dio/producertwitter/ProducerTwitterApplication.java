@@ -27,10 +27,16 @@ public class ProducerTwitterApplication {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
-            twitterReader.loadTweets(1)
+            twitterReader.loadTweets()
                          .forEach(tweet -> {
                              var key = new Faker().internet().username();
                              producer.sendMessage(key, tweet);
+
+                             try {
+                                 Thread.sleep(1000);
+                             } catch (InterruptedException e) {
+                                 throw new RuntimeException(e);
+                             }
                          });
         };
     }
