@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SentimentAnalysisService {
+    // https://corenlp.run/
     public SentimentClass analyzeSentiment(String message) {
         return new Sentence(message).sentiment();
     }

@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    bootstrap-servers: {{ kafka.broker.server }}
+    properties:
+      security:
+        protocol: SASL_SSL
+      sasl:
+        jaas:
+          config: org.apache.kafka.common.security.plain.PlainLoginModule required username='{{ CLUSTER API KEY }}' password='{{ CLUSTER API SECRET }}';
+        mechanism: PLAIN
+    consumer:
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
