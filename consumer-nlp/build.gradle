@@ -17,6 +17,8 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'edu.stanford.nlp:stanford-corenlp:4.5.5'
+	implementation 'edu.stanford.nlp:stanford-corenlp:4.5.5:models'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
