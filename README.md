@@ -4,7 +4,7 @@ Join the DIO International Acceleration - Kafka Integration with Spring Boot to 
 
 The acceleration prepares professionals for significant opportunities outside Brazil with technical sessions conducted entirely in English. These are free workshops for technical advancement, along with networking and connections with international recruitment partners for major global companies.
 
-What you will see in this acceleration:
+> Available on DIO Platform at https://web.dio.me/acceleration/aceleracao-internacional-dio-event-driven-architecture-kafka
 
 ## Section 01: Fundamentals of Event-Driven and Message-Driven Architecture
 In this section, we will explore the fundamentals of Event-Driven Architecture (EDA), including messaging in modern software, benefits in microservices, and messaging specifications for interoperability.
